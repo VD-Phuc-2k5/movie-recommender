@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body {
+  color: #18181b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .button-primary {
+    @apply rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .button-secondary {
+    @apply rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition hover:border-zinc-400 hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .api-response {
+    @apply max-h-[34rem] overflow-auto whitespace-pre-wrap break-words px-5 py-4 font-mono text-xs leading-6 text-zinc-700;
+  }
+
+  .api-error {
+    @apply rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800;
+  }
+
+  .field-label {
+    @apply flex flex-col gap-1.5 text-xs font-semibold tracking-wide text-zinc-600 uppercase;
+  }
+
+  .field-input {
+    @apply min-h-10 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm font-normal normal-case tracking-normal text-zinc-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100;
+  }
+}
